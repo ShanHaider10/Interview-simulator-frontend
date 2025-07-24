@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <br />
+  <a href="https://github.com/ShanHaider10/Interview-Simulator" target="_blank">
+    <img src="https://github.com/ShanHaider10/Interview-Simulator/blob/master/project.PNG" alt="Project Banner">
+  </a>
+  <br />
 
-## Getting Started
+  <div>
+    <img src="https://img.shields.io/badge/Next.js-0070F3?style=for-the-badge&logo=next.js&logoColor=white" />
+    <img src="https://img.shields.io/badge/-JavaScript-green?style=for-the-badge&logo=javascript&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Express.js-grey?style=for-the-badge&logo=express&logoColor=white" />
+    <img src="https://img.shields.io/badge/MongoDB-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white" />
+  </div>
 
-First, run the development server:
+  <h3 align="center">Interview Simulator 🎤</h3>
+</div>
+
+---
+
+## 📋 Table of Contents
+
+1. [📖 Introduction](#introduction)
+2. [⚙️ Tech Stack](#tech-stack)
+3. [🚀 Features](#features)
+4. [📦 Setup & Installation](#setup--installation)
+5. [💡 Usage](#usage)
+6. [📁 Folder Structure](#folder-structure)
+7. [🌐 Links](#links)
+
+---
+
+## 🤖 Introduction
+
+A full-stack AI-based Interview Simulator that:
+
+- Asks role-based interview questions.
+- Records user answers and performs **Sentiment Analysis**.
+- Displays an animated **interview summary**.
+- Saves transcript data to **MongoDB**.
+- Built using `Next.js`, `Express`, `MongoDB`, `TailwindCSS`, `Framer Motion`.
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend**: Next.js 15, TailwindCSS, Framer Motion
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (Mongoose)
+- **State Management**: Context API
+- **Deployment**: (Optional - add Vercel / Render link here)
+
+---
+
+## 🚀 Features
+
+- ✅ Role-based dynamic interview flow
+- ✅ Animated question and answer UI
+- ✅ Real-time Sentiment Analysis
+- ✅ Summary Table with highlight effects
+- ✅ Data stored in MongoDB
+- ✅ Restart interview functionality
+- 🚧 (Coming Soon): Export to PDF, Auth with Google, Admin Analytics
+
+---
+
+## 🤸 Setup & Installation
+
+### Prerequisites
+
+- Node.js (v18+)
+- MongoDB (local or Atlas)
+- Yarn / npm
+
+---
+
+### 📦 Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ShanHaider10/Interview-Simulator.git
+cd Interview-Simulator
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔧 Frontend Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## Learn More
+Visit 👉 [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔧 Backend Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-## Deploy on Vercel
+This will start the server on 👉 `http://localhost:4000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✅ Make sure MongoDB is running on: `mongodb://127.0.0.1:27017/interview`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### Example `.env` (Optional)
+
+If needed:
+
+```env
+PORT=4000
+MONGODB_URI=mongodb://127.0.0.1:27017/interview
+```
+
+---
+
+## 💡 Usage
+
+- Select a role and start interview.
+- Answer questions and submit.
+- Summary appears with **animated sentiment result**.
+- Transcript is saved to MongoDB.
+
+---
+
+## 📁 Folder Structure
+
+```bash
+Interview-Simulator/
+├── frontend/       # Next.js client
+│   ├── app/
+│   ├── components/
+│   ├── context/
+│   ├── utils/
+│   └── ...
+├── backend/        # Express server
+│   ├── routes/
+│   ├── models/
+│   ├── controllers/
+│   └── ...
+```
+---
+
+## 🌐 Links
+
+- 🔥 [Live Demo (if deployed)](https://your-live-link.com)
+- 📦 [MongoDB Docs](https://mongodb.com)
+- 🔠 [Next.js Docs](https://nextjs.org/docs)
+- 🛠️ [Framer Motion](https://www.framer.com/motion/)
+
+---
+
+## 🙌 Credits
+
+Built with ❤️ by [Shan Haider](https://github.com/ShanHaider10)
+
+---
