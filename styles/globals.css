@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.badge {
+    @apply inline-block px-2 py-1 text-sm font-semibold rounded;
+}
+
+.badge.positive {
+    @apply bg-green-500 text-white;
+}
+
+.badge.negative {
+    @apply bg-red-500 text-white;
+}
+
+.badge.neutral {
+    @apply bg-gray-400 text-white;
+}
