@@ -1,33 +1,28 @@
 "use client";
 
-import useInterviewData from "../../hooks/useInterviewData"
-import {useInterviewContext} from "../../context/InterviewContext"
-
+import { useInterviewContext } from "../../context/InterviewContext";
 import { useState } from "react";
-import Transcript from "../../components/Transcript"
-import LoadingSpinner  from "../../components/LoadingSpinner"
+import Transcript from "../../components/Transcript";
 
+const hardcodedQuestions = [
+  "How would you handle a tough client?",
+  "What makes you a good salesperson?",
+  "Tell me about a successful pitch you’ve done."
+];
 
-
-export default function InterviewPage() {
-  const { role, setTranscript } = useInterviewContext();
-  const { questions, loading } = useInterviewData(role);
+export default function Inter() {
+  const { setTranscript, transcript } = useInterviewContext();
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
 
-  const handleNext = async () => {
-    const response = await fetch("http://localhost:4000/api/sentiment", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ answer }),
-    });
-    const { sentiment } = await response.json();
-    setTranscript((prev) => [...prev, { question: questions[index], answer, sentiment }]);
+  const questions = hardcodedQuestions;
+
+  const handleNext = () => {
+    setTranscript((prev) => [...prev, { question: questions[index], answer }]);
     setAnswer("");
     setIndex(index + 1);
   };
 
-//   if (loading) return <LoadingSpinner />;
   if (index >= questions.length) return <Transcript />;
 
   return (

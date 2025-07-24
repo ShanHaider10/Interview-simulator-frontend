@@ -26,7 +26,7 @@ export default function StartScreen() {
  const handleStart = (selectedRole: string) => {
     reset();
     setRole(selectedRole);
-    router.push("/inter");
+    router.push("/interview");
   };
 
 
@@ -96,7 +96,7 @@ export default function StartScreen() {
           onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.04)"}
           onMouseOut={(e) => e.currentTarget.style.transform = "scale(1.0)"}
         >
-          💼 Sales Representative
+          💼  Representative
         </button>
         <button
           onClick={() => handleStart("support")}
